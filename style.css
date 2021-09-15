@@ -1,0 +1,30 @@
+.nav {
+    box-sizing: border-box;
+    height: 10vh;
+    width: 100%;
+    background-color:dodgerblue;
+    position: relative;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.body_ {
+    margin: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: dodgerblue;
+    height: 100vh;
+    padding: 1em;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+.indented {
+    padding-left: 50pt;
+    padding-right: 50pt;
+    text-align: justify;
+}
