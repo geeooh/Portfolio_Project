@@ -1,3 +1,37 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+/* The image used */
+  background-image: url("nycair.jpg");
+
+/* Full height */
+  height: 100%; 
+
+/* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg_black {
+  background-color: rgba(0, 0, 0, 0.959);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  overflow: auto;
+  justify-content: center;
+  list-style: none;
+  margin: 10px 0px; 
+  padding: 1em 0em; 
+}
+
 
 
 .body {
@@ -6,7 +40,6 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #333;
     overflow: hidden;
 
   }
@@ -80,41 +113,24 @@
     cursor: pointer;
   }
 
-
-/*body {
-    margin: 0;
-    height: 100vh;
-    overflow-y: hidden;
-}*/
-
-.navi {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0; 
-    background:gray;
-}
-  
-.navi a {
+.navbar a {
     text-decoration: none;
     display: block;
     padding: 1em;
-    color: white;
+    color:white;
 }
   
-.navi a:hover {
-    background:rgba(0, 0, 0, 0.1);
+.navbar a:hover {
+    background:rgba(255, 255, 255, 0.452);
 }
 
-.navi a { 
+.navbar a { 
     text-align: center; 
     padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255,0.3); 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    ; 
 }
 
-.navi li:last-of-type a {
+.navbar li:last-of-type a {
     border-bottom: none;
 }
 
@@ -138,6 +154,11 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+}
+
+.flex_container_type {
+  display: flex;
+  justify-content:center;
 }
 
 em {
@@ -171,14 +192,62 @@ em {
    border:2px solid black;
 }
 
-@media screen and (min-width: 600px) {
-    .flex_container{
-        flex-direction: row;
-    }
+
+
+#typing {
+
+  width: 0ch;
+  color: white;
+  float: left;
+  font-family: sans-serif;
+  font-weight:bold;
+  font-size: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(22) 1s alternate forwards;
+}
+#typing span{
+color:white;}
+
+#crow {
+  float: left;
+  color: white;
+  font-family: consolas;
+  font-weight:bold;
+  font-size: 24px;
+  animation: crow 0.4s linear 0s infinite;
+}
+@keyframes typing {
+  from {
+      width: 0ch;
+  }
+  to {
+      width: 19.5ch;
+  }
+}
+@keyframes crow {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
 
+@media screen and (min-width: 600px) {
+  .flex_container{
+      flex-direction: row;
+      
+  }
+  #typing{
+    font-size: 60px;
+  }
+  #crow{
+    font-size: 50px;
+  }
 
 
+}
 
 
 
