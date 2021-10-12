@@ -21,6 +21,22 @@ body, html {
   color: white;
 }
 
+.bg-white {
+  background-color:white;
+}
+
+.black-text {
+  color: black;
+}
+
+.white-text {
+  color: white;
+}
+
+.red-text {
+  color:red;
+}
+
 .navbar {
   display: flex;
   flex-flow: row wrap;
@@ -32,8 +48,6 @@ body, html {
   padding: 1em 0em; 
 }
 
-
-
 .body {
     display: flex;
     justify-content: center;
@@ -41,7 +55,6 @@ body, html {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-
   }
   
 .play-button {
@@ -117,18 +130,13 @@ body, html {
     text-decoration: none;
     display: block;
     padding: 1em;
-    color:white;
+    text-align: center; 
 }
   
 .navbar a:hover {
     background:rgba(255, 255, 255, 0.452);
 }
 
-.navbar a { 
-    text-align: center; 
-    padding: 10px;
-    ; 
-}
 
 .navbar li:last-of-type a {
     border-bottom: none;
@@ -192,12 +200,9 @@ em {
    border:2px solid black;
 }
 
-
-
-#typing {
+.typing {
 
   width: 0ch;
-  color: white;
   float: left;
   font-family: sans-serif;
   font-weight:bold;
@@ -206,10 +211,15 @@ em {
   white-space: nowrap;
   animation: typing 5s steps(22) 1s alternate forwards;
 }
-#typing span{
-color:white;}
 
-#crow {
+.typing-short {
+  animation: typing-short 5s steps(22) 1s alternate forwards;
+}
+
+.typing span{
+  color:black;} 
+
+.crow {
   float: left;
   color: white;
   font-family: consolas;
@@ -217,12 +227,23 @@ color:white;}
   font-size: 24px;
   animation: crow 0.4s linear 0s infinite;
 }
+
 @keyframes typing {
   from {
       width: 0ch;
   }
   to {
       width: 19.5ch;
+  }
+}
+
+
+@keyframes typing-short {
+  from {
+      width: 0ch;
+  }
+  to {
+      width: 9.5ch;
   }
 }
 @keyframes crow {
@@ -234,15 +255,17 @@ color:white;}
   }
 }
 
+
+
 @media screen and (min-width: 600px) {
   .flex_container{
       flex-direction: row;
       
   }
-  #typing{
+  .typing{
     font-size: 60px;
   }
-  #crow{
+  .crow{
     font-size: 50px;
   }
 
