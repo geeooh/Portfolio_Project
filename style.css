@@ -5,18 +5,18 @@ body, html {
 
 .bg {
 /* The image used */
-  background-image: url("nycair.jpg");
+  background-image: url("ghbg.png");
 
 /* Full height */
   height: 100%; 
 
 /* Center and scale the image nicely */
-  background-position: center;
+  background-position: right center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
-.bg_black {
+.bg-black {
   background-color: rgba(0, 0, 0, 0.959);
   color: white;
 }
@@ -133,8 +133,12 @@ body, html {
     text-align: center; 
 }
   
-.navbar a:hover {
-    background:rgba(255, 255, 255, 0.452);
+.black-hover a:hover {
+    background:rgba(255, 255, 255, 0.76);
+}
+
+.white-hover a:hover {
+  background:rgba(0, 0, 0, 0.212);
 }
 
 
@@ -191,12 +195,12 @@ em {
     height: auto;
 }
 
-.usatoday_link {
+.usatoday-link {
    color:black;
    text-decoration: none;
 }
 
-.usatoday_link div {
+.usatoday-link div {
    border:2px solid black;
 }
 
@@ -227,6 +231,122 @@ em {
   font-size: 24px;
   animation: crow 0.4s linear 0s infinite;
 }
+
+
+
+
+
+
+
+
+
+
+#nav * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+#nav p {
+  margin-bottom: 2.5em;
+}
+#nav #nav a {
+  color: inherit;
+  text-decoration: none;
+}
+#nav h2 {
+  font: bold 2.8rem 'Work Sans', 'Arial Black', Gadget, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 2em;
+}
+nav {
+  mix-blend-mode: difference;
+  z-index: 100;
+}
+#nav ul {
+    position: fixed;
+    top: 60px;
+    left: 5px;
+    height: 100vh;
+    visibility: hidden;
+    pointer-events: none;
+    list-style: none;
+    width: 35px;
+  }
+
+#nav li {
+      font: bold 1.5rem 'Work Sans', 'Arial Black', Gadget, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 0.75em 0;
+      writing-mode: vertical-lr;
+    }
+
+#nav.active ul{
+    visibility: visible;
+    pointer-events: initial;
+    transition-delay: 0.2s;
+  }
+
+#nav .nav-icon {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  transition: background 0.3s;
+  width: 35px;
+}
+
+#nav span {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    background:rgb(10, 10, 10);
+    display: block;
+    height: 3px;
+    right: 5px;
+    transition: transform 0.3s;
+  }
+
+#nav .nav-icon:before, 
+#nav .nav-icon:after {
+      width: 100%;
+      height: 3px;
+      background: rgb(10, 10, 10);
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+    }
+
+#nav .nav-icon:before {  
+      top: -8px;
+    }
+#nav .nav-icon:after {
+      bottom: -8px;
+    }
+#nav .active .nav-icon span{
+    transform: rotate(90deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes typing {
   from {
@@ -271,6 +391,12 @@ em {
 
 
 }
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Work+Sans:700)
+
 
 
 
