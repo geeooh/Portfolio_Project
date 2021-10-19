@@ -279,7 +279,7 @@ nav {
   }
 
 #nav li {
-      font: bold 1.5rem 'Work Sans', 'Arial Black', Gadget, sans-serif;
+      font: bold .5rem 'Work Sans', 'Arial Black', Gadget, sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
       padding: 0.75em 0;
@@ -336,15 +336,6 @@ nav {
 #nav .active .nav-icon span{
     transform: rotate(90deg);
   }
-
-
-
-
-
-
-
-
-
 
 
 
